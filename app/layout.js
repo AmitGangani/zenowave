@@ -18,11 +18,6 @@ export default function RootLayout({ children }) {
     }} >
       <html lang="en">
         <body className={inter.className}>
-          <header>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </header>
           <main>
             <ThemeProvider
               attribute="class"

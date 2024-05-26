@@ -3,6 +3,7 @@ import "./globals.css";
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { ThemeProvider } from "@/components/theme-provider"
 import { dark } from "@clerk/themes";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
             <ThemeProvider
               attribute="class"
               defaultTheme="dark" >
+              <Toaster theme="light" position="bottom-center" />
               {children}
             </ThemeProvider>
           </main>

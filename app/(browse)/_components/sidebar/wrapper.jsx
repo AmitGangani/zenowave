@@ -13,12 +13,13 @@ import { useEffect, useState } from "react";
 export const Wrapper = ({ children }) => {
    // const isClient = useIsClient();
    const [isClient, setIsClient] = useState(false);
+
    useEffect(() => {
       setIsClient(true);
    }, []);
 
    const { collapsed } = useSidebar((state) => state);
-
+   // console.log(collapsed);
    if (!isClient) {
       return (
          <aside className="fixed left-0 flex flex-col w-[70px] lg:w-60 h-full bg-background border-r border-[#2D2E35] z-50">

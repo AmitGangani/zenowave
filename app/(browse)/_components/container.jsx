@@ -4,14 +4,12 @@ import { useEffect } from "react";
 import { useMediaQuery } from "usehooks-ts";
 
 import { cn } from "@/lib/utils";
-import { useCreatorSidebar } from "@/store/use-creator-sidebar";
+import { useSidebar } from "@/store/use-sidebar";
 
 export const Container = ({ children }) => {
-   const { collapsed, onCollapse, onExpand } = useCreatorSidebar(
-      (state) => state
-   );
+   const { collapsed, onCollapse, onExpand } = useSidebar((state) => state);
    const matches = useMediaQuery("(max-width: 1024px)");
-   // console.log(matches);
+   // console.log(collapsed, matches);
    useEffect(() => {
       if (matches) {
          onCollapse();

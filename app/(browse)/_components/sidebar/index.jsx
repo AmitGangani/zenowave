@@ -1,4 +1,3 @@
-"use client";
 // import { getFollowedUsers } from "@/lib/follow-service";
 // import { getRecommended } from "@/lib/recommended-service";
 

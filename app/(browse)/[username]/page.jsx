@@ -24,11 +24,11 @@ const UserPage = async ({ params }) => {
       <>
          <Actions isFollowing={isFollowing} userId={user.id} />
       </>
-      //  <StreamPlayer
+      // <StreamPlayer
       //    user={user}
       //    stream={user.stream}
       //    isFollowing={isFollowing}
-      //  />
+      // />
    );
 };
 

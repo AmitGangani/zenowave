@@ -3,8 +3,8 @@ import { notFound } from "next/navigation";
 import { getUserByUsername } from "@/lib/user-service";
 import { isFollowingUser } from "@/lib/follow-service";
 import { isBlockedByUser } from "@/lib/block-service";
-import { Actions } from "./_components/action";
-// import { StreamPlayer } from "@/components/stream-player";
+// import { Actions } from "./_components/action";
+import { StreamPlayer } from "@/components/stream-player";
 
 const UserPage = async ({ params }) => {
    const user = await getUserByUsername(params.username);
@@ -21,14 +21,11 @@ const UserPage = async ({ params }) => {
    }
 
    return (
-      <>
-         <Actions isFollowing={isFollowing} userId={user.id} />
-      </>
-      // <StreamPlayer
-      //    user={user}
-      //    stream={user.stream}
-      //    isFollowing={isFollowing}
-      // />
+      <StreamPlayer
+         user={user}
+         stream={user.stream}
+         isFollowing={isFollowing}
+      />
    );
 };
 

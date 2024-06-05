@@ -18,12 +18,10 @@ export default async function RootLayout({ children }) {
       <html lang="en">
          <body className={inter.className}>
             <SessionProvider session={session}>
-               <main>
-                  <ThemeProvider attribute="class" defaultTheme="dark">
-                     <Toaster theme="light" position="bottom-center" />
-                     {children}
-                  </ThemeProvider>
-               </main>
+               <ThemeProvider attribute="class" defaultTheme="dark">
+                  <Toaster theme="light" position="bottom-center" />
+                  {children}
+               </ThemeProvider>
             </SessionProvider>
          </body>
       </html>

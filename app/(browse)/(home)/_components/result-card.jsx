@@ -8,7 +8,7 @@ import { UserAvatar, UserAvatarSkeleton } from "@/components/user-avatar";
 export const ResultCard = ({ data }) => {
    return (
       <Link href={`/${data.user.username}`}>
-         <div className="h-full w-full space-y-4">
+         <div className="h-full w-full space-y-4 bg-background p-2 rounded-xl">
             <Thumbnail
                src={data.thumbnailUrl}
                fallback={data.user.image}

@@ -19,8 +19,8 @@ export const Toggle = () => {
                <Hint label={label} side="right" asChild>
                   <Button
                      onClick={onExpand}
-                     variant="ghost"
-                     className="h-auto p-2"
+                     variant=""
+                     className="rounded-full hover:bg-purple-300 hover h-auto p-2"
                   >
                      <ArrowRightFromLine className="h-4 w-4" />
                   </Button>
@@ -33,8 +33,8 @@ export const Toggle = () => {
                <Hint label={label} side="right" asChild>
                   <Button
                      onClick={onCollapse}
-                     className="h-auto p-2 ml-auto"
-                     variant="ghost"
+                     className="rounded-full hover:bg-purple-300 h-auto p-2 ml-auto"
+                     variant=""
                   >
                      <ArrowLeftFromLine className="h-4 w-4" />
                   </Button>

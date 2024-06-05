@@ -13,7 +13,7 @@ export const SignUp = () => {
                await signIn("google");
             }}
          >
-            <Button variant="primary">
+            <Button variant="">
                <FcGoogle className="h-4 w-4 mr-2" />
                Sign up with Google
             </Button>

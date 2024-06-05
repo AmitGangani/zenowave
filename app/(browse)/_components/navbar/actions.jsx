@@ -16,7 +16,7 @@ export const Actions = async () => {
                <Button
                   size="sm"
                   variant=""
-                  className="text-muted-foreground hover:text-primary"
+                  className=" hover:text-white hover:bg-blue-500"
                   asChild
                >
                   <Link href={`/u/${user.username}`}>

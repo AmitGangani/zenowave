@@ -22,7 +22,7 @@ export const Wrapper = ({ children }) => {
    // console.log(collapsed);
    if (!isClient) {
       return (
-         <aside className="fixed left-0 flex flex-col w-[70px] lg:w-60 h-full bg-background border-r border-[#2D2E35] z-50">
+         <aside className="rounded-2xl fixed left-0 flex flex-col w-[70px] lg:w-60 h-full bg-background border-r border-[#2D2E35] z-50">
             <ToggleSkeleton />
             <FollowingSkeleton />
             <RecommendedSkeleton />

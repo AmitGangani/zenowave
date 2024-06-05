@@ -41,7 +41,7 @@ export const Search = () => {
             value={value}
             onChange={(e) => setValue(e.target.value)}
             placeholder="Search"
-            className="rounded-r-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0"
+            className=" bg-black rounded-r-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0"
          />
          {value && (
             <X
@@ -49,13 +49,8 @@ export const Search = () => {
                onClick={onClear}
             />
          )}
-         <Button
-            type="submit"
-            size="sm"
-            variant="secondary"
-            className="rounded-l-none"
-         >
-            <SearchIcon className="h-5 w-5 text-muted-foreground" />
+         <Button type="submit" size="sm" variant="" className="rounded-l-none">
+            <SearchIcon className="h-5 w-5 bg-text-m" />
          </Button>
       </form>
    );

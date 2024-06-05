@@ -35,7 +35,6 @@ export const useViewerToken = (hostIdentity) => {
 
       createToken();
    }, [hostIdentity]);
-
    return {
       token,
       name,

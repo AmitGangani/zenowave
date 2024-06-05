@@ -54,9 +54,9 @@ export const Actions = ({ hostIdentity, isFollowing, isHost }) => {
       <Button
          disabled={isPending || isHost}
          onClick={toggleFollow}
-         variant="primary"
+         variant=""
          size="sm"
-         className="w-full lg:w-auto"
+         className=" hover:bg-rose-500 w-full lg:w-auto"
       >
          <Heart
             className={cn(

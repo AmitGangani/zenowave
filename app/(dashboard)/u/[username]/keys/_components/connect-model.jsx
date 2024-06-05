@@ -77,11 +77,7 @@ export const ConnectModal = () => {
                <DialogClose ref={closeRef} asChild>
                   <Button variant="ghost">Cancel</Button>
                </DialogClose>
-               <Button
-                  disabled={isPending}
-                  onClick={onSubmit}
-                  variant="primary"
-               >
+               <Button disabled={isPending} onClick={onSubmit} variant="">
                   Generate
                </Button>
             </div>

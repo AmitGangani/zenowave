@@ -23,7 +23,7 @@ export const columns = [
          <div className="flex items-center gap-x-4">
             <UserAvatar
                username={row.original.username}
-               imageUrl={row.original.imageUrl}
+               imageUrl={row.original.image}
             />
             <span>{row.original.username}</span>
          </div>

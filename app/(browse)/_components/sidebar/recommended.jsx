@@ -21,7 +21,7 @@ export const Recommended = ({ data }) => {
                <UserItem
                   key={user.id}
                   username={user.username}
-                  imageUrl={user.imageUrl}
+                  imageUrl={user.image}
                   isLive={user.stream?.isLive}
                />
             ))}

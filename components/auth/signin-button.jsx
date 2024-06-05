@@ -1,3 +1,11 @@
-export const SignInButton = ({ children }) => {
-   return <div>{children}</div>;
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+
+export const SignInButton = () => {
+   return (
+      <Button variant="" size="sm" asChild>
+         <Link href="/sign-in">Log in</Link>
+      </Button>
+   );
 };

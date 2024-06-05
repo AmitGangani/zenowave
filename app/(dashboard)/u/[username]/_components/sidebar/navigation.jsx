@@ -1,14 +1,14 @@
 "use client";
 
-import { useUser } from "@/lib/auth";
 import { usePathname } from "next/navigation";
 import { Fullscreen, KeyRound, MessageSquare, Users } from "lucide-react";
 
 import { NavItem, NavItemSkeleton } from "./nav-item";
+import { useCurrentUser } from "@/lib/auth";
 
 export const Navigation = () => {
    const pathname = usePathname();
-   const { user } = useUser();
+   const user = useCurrentUser();
 
    const routes = [
       {

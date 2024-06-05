@@ -6,6 +6,25 @@ import { getSelf } from "@/lib/auth-service";
 const f = createUploadthing();
 
 export const ourFileRouter = {
+   imageUploader: f({
+      image: {
+         maxFileSize: "4MB",
+         maxFileCount: 1,
+      },
+   })
+      .middleware(async () => {
+         const self = await getSelf();
+
+         return { user: self };
+      })
+      .onUploadComplete(async ({ metadata, file }) => {
+         await db.user.update({
+            where: { id: metadata.user.id },
+            data: {
+               image: file.url,
+            },
+         });
+      }),
    thumbnailUploader: f({
       image: {
          maxFileSize: "4MB",

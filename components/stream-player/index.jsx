@@ -42,7 +42,7 @@ export const StreamPlayer = ({ user, stream, isFollowing }) => {
                   hostName={user.username}
                   hostIdentity={user.id}
                   viewerIdentity={identity}
-                  imageUrl={user.imageUrl}
+                  imageUrl={user.image}
                   isFollowing={isFollowing}
                   name={stream.name}
                />

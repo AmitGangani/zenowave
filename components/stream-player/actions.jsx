@@ -3,18 +3,18 @@
 import { toast } from "sonner";
 import { Heart } from "lucide-react";
 import { useTransition } from "react";
-import { useAuth } from "@/lib/auth";
 import { useRouter } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { onFollow, onUnfollow } from "@/actions/follow";
+import { useCurrentUser } from "@/lib/auth";
 
 export const Actions = ({ hostIdentity, isFollowing, isHost }) => {
    const [isPending, startTransition] = useTransition();
    const router = useRouter();
-   const { userId } = useAuth();
+   const user = useCurrentUser();
 
    const handleFollow = () => {
       startTransition(() => {
@@ -37,7 +37,7 @@ export const Actions = ({ hostIdentity, isFollowing, isHost }) => {
    };
 
    const toggleFollow = () => {
-      if (!userId) {
+      if (!user) {
          return router.push("/sign-in");
       }
 

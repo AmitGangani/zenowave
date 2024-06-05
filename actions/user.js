@@ -8,8 +8,14 @@ import { getSelf } from "@/lib/auth-service";
 export const updateUser = async (values) => {
    const self = await getSelf();
 
+   if (!self) {
+      throw new Error("No user found");
+   }
+
    const validData = {
       bio: values.bio,
+      username: values.username,
+      image: values.image,
    };
 
    const user = await db.user.update({
@@ -17,6 +23,7 @@ export const updateUser = async (values) => {
       data: { ...validData }
    });
 
+   revalidatePath("/");
    revalidatePath(`/${self.username}`);
    revalidatePath(`/u/${self.username}`);
 

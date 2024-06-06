@@ -22,9 +22,14 @@ const roomService = new RoomServiceClient(
 const ingressClient = new IngressClient(process.env.LIVEKIT_API_URL);
 
 export const resetIngresses = async (hostIdentity) => {
-   const ingresses = await ingressClient.listIngress({
-      roomName: hostIdentity,
-   });
+   let ingresses;
+   if (!hostIdentity) {
+      ingresses = await ingressClient.listIngress({});
+   } else {
+      ingresses = await ingressClient.listIngress({
+         roomName: hostIdentity,
+      });
+   }
 
    const rooms = await roomService.listRooms([hostIdentity]);
 

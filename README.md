@@ -2,13 +2,15 @@
 
 🚀 Excited to share Zenowave, my new streaming platform with a ton of features! From RTMP/WHIP streaming that can connect to obs or any favourite streaming software and real-time chat to a robust streamer dashboard and viewer engagement tools. Built with Next.js⚡ server side rendering capability, NextAuth 🔐 for authentication, Shadcn/ui🧩 for components, Tailwind🎨 for styling, LiveKit for live streaming, Prisma ORM with PostgreSQL🐘 for database management, Zustand🗂️ for state management, and UploadThing📤 for file handling.
 
+https://github.com/AmitGangani/zenowave/assets/135453332/777f6180-4684-40e7-b9c1-9acc3d58f0b6
+
 <h2 id="technologies">💻 Technologies</h2>
 
 -  Frontend: Next.js, NextAuth, TailwindCSS, Zustand
 -  Backend: Prisma ORM, LiveKit
 -  Database: PostgreSQL, UploadThing
 
-## Getting Started
+## ✨ Features:
 
 🔐Authentication with NextAuth<br>
 &emsp; ● sign in/signup with google
